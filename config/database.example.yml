@@ -1,0 +1,22 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+
+development:
+  <<: *default
+  database: sss_development
+  #username: sss
+  #password:
+  #host: localhost
+  #port: 5432
+
+test:
+  <<: *default
+  database: sss_test
+
+production:
+  <<: *default
+  database: sss_production
+  username: sss
+  password: <%= ENV['SSS_DATABASE_PASSWORD'] %>
