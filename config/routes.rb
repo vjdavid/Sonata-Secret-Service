@@ -1,10 +1,10 @@
 Rails.application.routes.draw do
 
   resources :agents do
-	  resources :proyects
+	  resources :projects
 	end
 
-	resources :proyects do
+	resources :projects do
 	  resources :tasks
 	end
 
