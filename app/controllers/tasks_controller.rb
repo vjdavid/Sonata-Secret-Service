@@ -1,6 +1,6 @@
 class TasksController < ApplicationController
   before_action :find_project
-  before_action :find_task, expect: [:index, :create]
+  before_action :find_task, except: [:index, :create]
 
   def index
     @task = @project.tasks
