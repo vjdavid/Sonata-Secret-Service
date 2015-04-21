@@ -28,7 +28,7 @@ ActiveRecord::Schema.define(version: 20150421014726) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "agent_id"
+    t.integer  "agent_id"
   end
 
   create_table "tasks", force: :cascade do |t|
@@ -36,7 +36,7 @@ ActiveRecord::Schema.define(version: 20150421014726) do
     t.string   "description"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
-    t.string   "project_id"
+    t.integer  "project_id"
   end
 
 end

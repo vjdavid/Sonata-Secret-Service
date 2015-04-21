@@ -1,5 +1,5 @@
 class AddAgentIdToProjects < ActiveRecord::Migration
   def change
-    add_column :projects, :agent_id, :string
+    add_column :projects, :agent_id, :integer
   end
 end
