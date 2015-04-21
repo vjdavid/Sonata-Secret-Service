@@ -7,3 +7,7 @@ gem 'pg'
 group :development do
   gem 'spring', '~> 1.3.4'
 end
+
+group :development, :test do
+    gem 'rspec-rails', '~> 3.0'
+end
