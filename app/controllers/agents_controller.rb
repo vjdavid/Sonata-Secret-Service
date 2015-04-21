@@ -39,7 +39,6 @@ class AgentsController < ApplicationController
     params.require(:agent).permit(:name, :email)
   end
 
-
   def find_agent
     @agent = Agent.find(params[:id])
   end
