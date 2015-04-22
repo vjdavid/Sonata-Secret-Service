@@ -69,11 +69,14 @@ RSpec.describe ProjectsController, :type => :controller do
 
   describe "DELETE #destroy" do 
     it "delete object" do
+      skip "pendient" do
       agent = FactoryGirl.create(:agent)
       project = FactoryGirl.create(:project, agent_id: agent.id)
       expect {
         delete :destroy, id: project.id, agent_id: agent.id
       }.to change(Project.count).by(-1)
+      true.shold be(true)
+      end
     end
   end
 
